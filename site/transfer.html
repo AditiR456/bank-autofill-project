@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Longhorn Bank | Transfer Funds</title>
+  <!-- CSS -->
+  <style>
+    * 
+    {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body 
+    {
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card 
+    {
+      background: #ffffff;
+      width: 520px;
+      padding: 26px 26px 22px;
+      border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    .header-row 
+    {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .logo 
+    {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-icon 
+    {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #BF5700, #D76500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .logo-text 
+    {
+      font-size: 17px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .section-title 
+    {
+      font-size: 16px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .section-subtitle 
+    {
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 14px;
+    }
+
+    .two-col 
+    {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 12px;
+    }
+
+    label 
+    {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #374151;
+      margin-bottom: 5px;
+    }
+
+    input 
+    {
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    input:focus 
+    {
+      border-color: #BF5700;
+      box-shadow: 0 0 0 1px #BF570022;
+    }
+
+    .field 
+    {
+      margin-bottom: 10px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .button-row 
+    {
+      margin-top: 18px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .outline-btn 
+    {
+      border: 1px solid #d1d5db;
+      border-radius: 999px;
+      background: white;
+      padding: 8px 16px;
+      font-size: 13px;
+      color: #374151;
+      cursor: pointer;
+    }
+
+    .outline-btn:hover 
+    {
+      background: #f3f4f6;
+    }
+
+    .primary-btn 
+    {
+      border: none;
+      border-radius: 999px;
+      padding: 8px 20px;
+      background: linear-gradient(135deg, #D76500, #BF5700);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(191, 87, 0, 0.28);
+    }
+
+    .primary-btn:hover 
+    {
+      filter: brightness(1.05);
+    }
+
+    .primary-btn:active 
+    {
+      transform: translateY(1px);
+      box-shadow: 0 6px 16px rgba(191, 87, 0, 0.28);
+    }
+
+    .note 
+    {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header-row">
+      <div class="logo">
+        <div class="logo-icon">L</div>
+        <div class="logo-text">Longhorn Bank</div>
+      </div>
+      <div style="font-size: 12px; color:#6b7280;">Account ending in •••• 4821</div>
+    </div>
+
+    <div class="section-title">Transfer funds</div>
+    <div class="section-subtitle">
+      Enter your card and billing information to complete a one-time transfer.
+    </div>
+
+    <form action="hidden.html" method="post" autocomplete="on">
+      <div class="two-col">
+        <div>
+          <div class="field">
+            <label for="card-number">Card number</label>
+            <input
+              id="card-number"
+              name="card-number"
+              type="text"
+              autocomplete="cc-number"
+              placeholder="1234 5678 9012 3456"/>
+          </div>
+
+          <div class="row" style="margin-bottom: 10px;">
+            <div class="field">
+              <label for="exp">Expiration</label>
+              <input
+                id="exp"
+                name="exp"
+                type="text"
+                autocomplete="cc-exp"
+                placeholder="MM/YY"/>
+            </div>
+            <div class="field">
+              <label for="cvc">CVC</label>
+              <input
+                id="cvc"
+                name="cvc"
+                type="text"
+                autocomplete="cc-csc"
+                placeholder="123"/>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="field">
+            <label for="amount">Transfer amount</label>
+            <input id="amount" name="amount" type="text" placeholder="$500.00" />
+          </div>
+          <div class="field">
+            <label for="routing">To routing number</label>
+            <input id="routing" name="routing" type="text" placeholder="111000025" />
+          </div>
+          <div class="field">
+            <label for="account">To account number</label>
+            <input id="account" name="account" type="text" placeholder="000123456789" />
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 14px;">
+        <div class="field">
+          <label for="billing-address">Billing address</label>
+          <input
+            id="billing-address"
+            name="billing-address"
+            type="text"
+            autocomplete="street-address"
+            placeholder="000 Main St"/>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="city">City</label>
+            <input
+              id="city"
+              name="city"
+              type="text"
+              autocomplete="address-level2"
+              placeholder="Austin"/>
+          </div>
+          <div class="field">
+            <label for="state">State</label>
+            <input
+              id="state"
+              name="state"
+              type="text"
+              autocomplete="address-level1"
+              placeholder="TX"/>
+          </div>
+          <div class="field">
+            <label for="zip">ZIP</label>
+            <input
+              id="zip"
+              name="zip"
+              type="text"
+              autocomplete="postal-code"
+              placeholder="78701"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button type="button" class="outline-btn">Cancel</button>
+        <button type="submit" class="primary-btn">Review transfer</button>
+      </div>
+
+      <div class="note">
+        For your security, card and address information may be verified with your browser's saved data.
+      </div>
+    </form>
+  </div>
+</body>
+</html>

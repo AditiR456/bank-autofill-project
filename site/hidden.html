@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Longhorn Bank | Recipient Review</title>
+  <!-- CSS -->
+  <style>
+    * 
+    {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body 
+    {
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card 
+    {
+      background: #ffffff;
+      width: 440px;
+      padding: 24px 24px 20px;
+      border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+    }
+
+    .logo 
+    {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .logo-icon 
+    {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #BF5700, #D76500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .logo-text 
+    {
+      font-size: 16px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .title 
+    {
+      font-size: 16px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .subtitle 
+    {
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    label 
+    {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"] 
+    {
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    input[type="text"]:focus 
+    {
+      border-color: #BF5700;
+      box-shadow: 0 0 0 1px #BF570022;
+    }
+
+    button 
+    {
+      margin-top: 16px;
+      width: 100%;
+      border: none;
+      border-radius: 999px;
+      padding: 9px 0;
+      background: linear-gradient(135deg, #D76500, #BF5700);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(191, 87, 0, 0.28);
+    }
+
+    button:hover 
+    {
+      filter: brightness(1.05);
+    }
+
+    .note 
+    {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #9ca3af;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <div class="logo-icon">L</div>
+      <div class="logo-text">Longhorn Bank</div>
+    </div>
+
+    <div class="title">Recipient review</div>
+    <div class="subtitle">
+      Confirm who will see this transfer in their online banking portal.
+    </div>
+
+    <form action="#" method="post" autocomplete="on">
+      <input
+        type="hidden"
+        name="stored-username"
+        id="stored-username"
+        autocomplete="username"/>
+
+      <label for="display-name">Display name shown to recipient</label>
+      <input
+        type="text"
+        id="display-name"
+        name="display-name"
+        placeholder="ex: Longhorn Savings, Aditi Reddy"/>
+
+      <button type="submit">Confirm recipient</button>
+
+      <div class="note">
+        This page is used in my project to test how browsers handle autofill when a hidden field is present
+        alongside a visible one.
+      </div>
+    </form>
+  </div>
+</body>
+</html>
